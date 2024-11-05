@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body avec image en fond qui prends toute la page*/
+body{
+    width: 100%;
+    background-image:url(../img/RICE_N.FAULLE_1100-61a7.jpeg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(0, 128, 128);
+}
+h1{
+    color: rgb(192, 163, 101);
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    font-style: normal; 
+}
+h2{
+    color: rgb(192, 163, 101);
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    font-style: normal;    
+}
+h3{
+    color: rgb(192, 163, 101);
+}
+p{
+    color: rgb(255, 254, 254);
+    font-weight: bold;
+}
+/* Footer 3 colonnes  */
+footer{
+    display:flex;
+    /* flex-direction: column; */
+    align-items: end;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgb(0, 128, 128);
+}
+header img{
+    width: 10%;
+    height: 10%;
+}
+/* menu espacer entre eux et centrer et déco */
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    list-style-type: none;
+    font-size: 100%;
+}
+li a{
+    text-decoration: none;
+    color:rgb(192, 163, 101) ;
+}
+li a:hover{
+    color: rgb(255, 115, 0);
+}
+/* Utilisation de flex + photo cote a cote */
+.galerie{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Je veux img dans ma classe galerie-item avec dimension */
+.galerie-item img{
+    width: 100%;
+    height: 300px;
+    flex-basis: 100%;
+    border: 2px solid pink;
+    justify-content: space-between;    
+}
+/* Stylisation du grid-container, utilisation du display grid,  */
+.grid-container{
+    color: rgb(192, 163, 101);
+    font-weight: bold;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10px;
+}
+/* stylisation du fieldset */
+fieldset{
+    border-color: rgb(192, 163, 101);
+    border-style: dotted;
+    border-spacing: 200vh;
+}
+/* dimension du textarea */
+.message{
+    resize : both;
+    min-width : 10.5vh;
+    min-height : 10.5vh;
+    max-width : 21.9vh;
+    max-height : 21.9vh;
+}
+/* Début responsive */
+#mobile{
+    display: none;
+}
+@media screen and (min-width:1200px){
+    .galerie-item{
+        flex-basis: 24%;
+    }
+    .video video{
+        width: 100%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1199px){
+    .galerie-item{
+        flex-basis: 49%;
+    }
+    .logo{
+        width: 30%;
+        height: auto;
+    }
+    .video video{
+        width: 50%;
+    } 
+}
+/* Media apparition du menu mobile et suppression du nav desktop */
+@media (max-width:767px){
+    #desktop{
+        display: none;
+    }
+    #mobile{
+        display: inline-block;
+    }
+    .video video{
+        width: 25%;
+    }
+}
+/* Fin du responsive*/
+/* Marge entre mes photos */
+.galerie-item{
+    margin-bottom: 3%;
+    margin-right: 0.5%;
+}
+/* Ombre au survol avec un zoom pour animation */
+.galerie-item:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
+    box-shadow: 10px 5px 5px rgb(11, 138, 223);
+}
+.video video{
+    width: 100%;
+}
