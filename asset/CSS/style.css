@@ -79,24 +79,24 @@ li a:hover{
 .grid-container{
     color: rgb(192, 163, 101);
     font-weight: bold;
-    display: grid;
     text-align: center;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(2,1fr);
+}
+form{
+    display: grid;
+    grid-template: auto/1fr 1fr;
     grid-gap: 10px;
 }
 /* stylisation du fieldset */
 fieldset{
     border-color: rgb(192, 163, 101);
     border-style: dotted;
-    border-spacing: 200vh;
 }
 /* dimension du textarea */
-.message{
+#message{
     resize : both;
-    min-width : 10.5vh;
+    min-width : 10.5vw;
     min-height : 10.5vh;
-    max-width : 21.9vh;
+    max-width : 21.9vw;
     max-height : 21.9vh;
 }
 /* Début responsive */
